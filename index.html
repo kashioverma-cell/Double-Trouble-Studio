@@ -305,19 +305,26 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="#home">
-                    <img  src="./dts.logo.jpg" alt="Double Trouble Studio Logo" class="logo-img">
-                    <span class="logo-text">Double Trouble Studio</span>
-                </a>
+                <a href="#home" class="logo-link" aria-label="Double Trouble Studio">
+        <img
+          src="./dts.logo.jpg"
+          alt="Double Trouble Studio Logo"
+          class="site-logo"
+          width="160"
+          height="auto"
+          style="max-height:64px; height:auto;"
+          onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%2264%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23eee%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2212%22 fill=%22%23999%22>Logo not found</text></svg>'"
+        />
+      </a>
             </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="#team" class="nav-link">Team</a></li>
-                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+            <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
             <div class="nav-cta">
                 <a href="#contact" class="cta-button">Get Started</a>
             </div>
