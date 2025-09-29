@@ -1051,3 +1051,46 @@ section {
 .mt-1 { margin-top: 1rem; }
 .mt-2 { margin-top: 2rem; }
 .mt-3 { margin-top: 3rem; }
+
+/* Header / Nav */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Logo */
+.site-logo {
+  height: 60px; /* adjust size if needed */
+  width: auto;
+  display: block;
+}
+
+/* Navigation menu */
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .site-logo { height: 44px; }
+  .nav-menu { display: none; } /* later can add hamburger menu */
+  .site-nav { padding: 10px 14px; }
+}
