@@ -1067,9 +1067,10 @@ section {
 
 /* Logo */
 .site-logo {
-  height: 60px; /* adjust size if needed */
+  height: 48px;   /* Balanced size for desktop */
   width: auto;
   display: block;
+  object-fit: contain; /* ensures no distortion */
 }
 
 /* Navigation menu */
@@ -1078,7 +1079,7 @@ section {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 18px;
+  gap: 22px;
   align-items: center;
 }
 
@@ -1086,11 +1087,24 @@ section {
   text-decoration: none;
   color: #111;
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #0077ff; /* highlight on hover */
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-  .site-logo { height: 44px; }
-  .nav-menu { display: none; } /* later can add hamburger menu */
-  .site-nav { padding: 10px 14px; }
+  .site-logo {
+    height: 40px;   /* smaller logo on mobile */
+  }
+
+  .nav-menu {
+    display: none;  /* hide menu for now, can replace with hamburger */
+  }
+
+  .site-nav {
+    padding: 10px 16px;
+  }
 }
