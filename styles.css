@@ -89,13 +89,17 @@ p {
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* ↓ reduce vertical padding */
+  padding: 0.5rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* ↓ optional: guarantees a compact bar */
+  min-height: 64px;
 }
+
 
 .nav-logo a {
     display: flex;
@@ -1211,4 +1215,11 @@ section { scroll-margin-top: 88px; }
 
   /* CTA visible inside the menu list on mobile */
   .menu-cta { display: block; }
+}
+/* PATCH: remove duplicate CTA on desktop, keep for mobile menu */
+.menu-cta { display: none; }           /* hide on desktop */
+
+@media (max-width: 992px) {
+  .menu-cta { display: block; }        /* show CTA inside mobile dropdown */
+  .nav-cta { display: none; }          /* hide the right-side CTA on mobile */
 }
