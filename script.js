@@ -3,10 +3,17 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // Navigation functionality
-    const navbar = document.getElementById('navbar');
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+   // === Mobile menu toggle ===
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+
+if (hamburger && navMenu) {
+  hamburger.addEventListener('click', () => {
+    const open = navMenu.classList.toggle('active'); // show/hide menu
+    hamburger.classList.toggle('active', open);      // animate the icon
+    hamburger.setAttribute('aria-expanded', String(open)); // a11y
+  });
+}
     
     // Mobile menu toggle
     hamburger.addEventListener('click', function() {
