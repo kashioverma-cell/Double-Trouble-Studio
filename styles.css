@@ -181,7 +181,7 @@ p {
 
 /* Hero Section */
 .hero {
-    min-height: 65vh;                 /* comfortable height, not full-screen */
+    min-height: 75vh;                 /* comfortable height, not full-screen */
     display: flex;
     align-items: flex-start;          /* start near header instead of middle */
     padding: 56px 0 64px;             /* top / sides / bottom */
