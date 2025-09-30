@@ -1233,3 +1233,6 @@ section { scroll-margin-top: 88px; }
   .menu-cta { display: block; }        /* show CTA inside mobile dropdown */
   .nav-cta { display: none; }          /* hide the right-side CTA on mobile */
 }
+
+/* Hide the duplicate menu CTA everywhere */
+.menu-cta { display: none !important; }
