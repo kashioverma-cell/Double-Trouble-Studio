@@ -181,16 +181,15 @@ p {
 
 /* Hero Section */
 .hero {
-    min-height: 75vh;                 /* comfortable height, not full-screen */
+    min-height: 68vh;
     display: flex;
-    align-items: flex-start;          /* start near header instead of middle */
-    padding: 56px 0 64px;             /* top / sides / bottom */
+    align-items: flex-start;
+    /* ↑ MORE GAP ABOVE H1 */
+    padding: 80px 0 64px;   /* was 56px 0 64px */
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     position: relative;
     overflow: hidden;
 }
-
-
 
 .hero::before {
     content: '';
@@ -1180,10 +1179,10 @@ section {
   }
 }
 /* === Anchor offset so sections don't hide under sticky nav === */
-section { scroll-margin-top: 88px; }
+section { scroll-margin-top: 96px; }  /* match the larger top spacing */
 
 /* === Snappy headline weight (optional but nice) === */
-.hero-title { font-weight: 800; letter-spacing: -0.02em; }
+.hero-title { margin-top: 0; }
 
 /* === Mobile menu behavior === */
 @media (max-width: 992px) {
@@ -1236,3 +1235,9 @@ section { scroll-margin-top: 88px; }
 
 /* Hide the duplicate menu CTA everywhere */
 .menu-cta { display: none !important; }
+@media (max-width: 992px) {
+  .hero { padding-top: 64px; padding-bottom: 56px; } /* +24px vs before */
+}
+@media (max-width: 640px) {
+  .hero { padding-top: 40px; padding-bottom: 48px; } /* +12px vs before */
+}
