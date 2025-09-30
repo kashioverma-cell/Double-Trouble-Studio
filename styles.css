@@ -181,13 +181,16 @@ p {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: 72vh;                 /* was 100vh */
     display: flex;
-    align-items: center;
+    align-items: flex-start;           /* start near header instead of vertical center */
+    padding-top: 24px;                 /* comfortable gap below sticky nav */
+    padding-bottom: 56px;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     position: relative;
     overflow: hidden;
 }
+
 
 .hero::before {
     content: '';
@@ -199,6 +202,11 @@ p {
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23000" opacity="0.02"/><circle cx="75" cy="75" r="1" fill="%23000" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
     pointer-events: none;
 }
+/* Prevent unexpected gaps */
+.hero-title { margin-top: 0; }
+
+/* Keep anchor targets visible below sticky header */
+section { scroll-margin-top: 80px; }
 
 .hero-container {
     display: grid;
@@ -953,8 +961,16 @@ section {
     }
     
     .nav-container {
-        padding: 1rem 15px;
-    }
+    .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;   /* was 1rem 2rem */
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 64px;       /* keeps bar compact */
+}
+
     
     h1 {
         font-size: 2rem;
