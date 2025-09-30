@@ -302,38 +302,45 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home" class="logo-link" aria-label="Double Trouble Studio">
+   <nav class="navbar" id="navbar" aria-label="Primary">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="#home" class="logo-link" aria-label="Double Trouble Studio — Home">
         <img
           src="./dts.logo.jpg"
           alt="Double Trouble Studio Logo"
           class="site-logo"
-          width="auto"
-          height="auto"
-          style="max-height:64px; height:auto;"
+          width="200"
+          height="60"
+          decoding="async"
+          fetchpriority="high"
         />
       </a>
-            </div>
-            <ul class="nav-menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-            <div class="nav-cta">
-                <a href="#contact" class="cta-button">Get Started</a>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+    </div>
+
+    <button class="hamburger" id="hamburger"
+            aria-label="Toggle navigation"
+            aria-controls="nav-menu"
+            aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="menu-cta"><a href="#contact" class="cta-button">Get Started</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <a href="#contact" class="cta-button">Get Started</a>
+    </div>
+  </div>
+</nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
